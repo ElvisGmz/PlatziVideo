@@ -1,0 +1,238 @@
+body{
+    margin: 0;
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+}
+
+.headerLogo img{
+    max-height: 50px;
+    margin: 10px;
+}
+
+nav{
+    max-height: 54px;
+    margin: 10px;
+}
+
+.imgProfile{
+    padding: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #FFF;
+    height: 54px;
+    cursor: pointer;
+}
+
+.imgProfile img{
+    max-height: 50px;
+    margin: 0;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.imgProfile span{
+    margin-left: 10px;
+}
+
+
+.menuProfile:hover ul, .menuProfile ul:hover{
+    display: block;
+}
+
+.menuProfile ul{
+    list-style: none;
+    position: fixed;
+    background-color: #FFFFFF99;
+    border-radius: 5px;
+    right: 10px;
+    min-width: 140px;
+    padding: 10px 0px;
+    margin-top: 0;
+    text-align: center;
+    display: none;
+    color: #000;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.menuProfile ul li{
+    cursor: pointer;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.menuProfile ul li:hover{
+    text-decoration: underline;
+    background-color: #FFFFFF99;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+/* Buscador */
+.searchMain{
+    margin: auto;
+    max-width: calc(100vw - 20px);
+    min-height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.searchMain input{
+    padding: 1rem 2rem;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: #F0F0F022;
+    border: 2px solid #FFF;
+    color: #FFF;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    width: 70%;
+    outline: none;
+}::placeholder{
+    color: #FFF;
+}
+
+/* Carousel */
+
+h3{
+    margin-left: 2.5rem;
+    color: #FFF;
+}
+
+.carousel{
+    width: calc(100% - 5rem);
+    overflow-x: scroll;
+    padding: 0rem 2.5rem;
+    position: relative;
+    color:#FFF;
+}
+
+.carousel_container{
+    white-space: nowrap;
+    margin: 70px 0;
+    padding-bottom: 10px;
+}
+
+.carousel::-webkit-scrollbar{
+    height: 0px;
+}
+
+.carousel_card{
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background-color: crimson;
+    transform-origin: center, left;
+    overflow: hidden;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    -ms-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    position: relative;
+}
+
+.carousel_card:last-child{
+    margin-right: 2.5rem;
+}
+
+.carousel_container:hover .carousel_card{
+    opacity: 0.3;
+}
+
+.carousel_container:hover .carousel_card:hover{
+    opacity: 1;
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+
+.carousel_card img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.carousel_card .details{
+    background: linear-gradient(to top (0, 0, 0, 0.9) 0%, (0, 0, 0, 0) 100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 0.3s opacity;
+    -webkit-transition: 0.3s opacity;
+    -moz-transition: 0.3s opacity;
+    -ms-transition: 0.3s opacity;
+    -o-transition: 0.3s opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.carousel_card .details div img{
+    max-width: 25px;
+    object-fit: contain;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+
+.carousel_card .details .title{
+    position: absolute;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 170px;
+    opacity: 1;
+}
+
+.carousel_card .details .subtitle{
+    position: absolute;
+    margin-top: 190px;
+    font-size: 10px;
+    opacity: 1;
+}
+
+.carousel_card .details:hover{
+    opacity: 1;
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
